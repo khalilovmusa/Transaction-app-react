@@ -1,8 +1,12 @@
+import EditPopup from "./EditPopup";
 
-const EditTransaction = ({setDisplayEdit}) => {
+const EditTransaction = ({ setDisplayEdit }) => {
 
-    return(
-        <button onClick={() => setDisplayEdit(false)}>Cancel editing</button>
+    return (
+        <>
+            <EditPopup />
+            <button onClick={() => setDisplayEdit(false)}>Cancel editing</button>
+        </>
     )
 }
 

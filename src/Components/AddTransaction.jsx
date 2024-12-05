@@ -1,7 +1,7 @@
 
 import React from "react";
 import "../Styles/AddTransaction.css";
-import Popup from "./Popup";
+import Popup from "./AddPopup";
 
 const AddTransaction = ({getData, setDisplayAdd}) => {
     const handleSubmit = (e) => {
