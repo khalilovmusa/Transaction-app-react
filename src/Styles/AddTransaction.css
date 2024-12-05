@@ -1,0 +1,139 @@
+.popup {
+    top: 100vh;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.popup .overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 100ms ease-in-out 200ms;
+}
+
+.popup .popup-content {
+    z-index: 99;
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.15);
+    width: 95%;
+    max-width: 400px;
+    height: 330px;
+    background: linear-gradient(130deg, #FFEFBA, #FFFFFF);
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0px 2px 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 300ms ease-in-out;
+}
+
+.popup .popup-content .control-buttons {
+    width: 100%;
+    margin-left: 38%;
+    margin-top: 10%;
+}
+
+.popup .popup-content .control-buttons button {
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    /* background-image: linear-gradient(to right, #1D976C 0%, #93F9B9  51%, #1D976C  100%); */
+}
+
+
+.popup .popup-content .control-buttons button  {background-image: linear-gradient(to right, #1D976C 0%, #93F9B9  51%, #1D976C  100%)}
+.popup .popup-content .control-buttons button  {
+
+   padding: 10px 30px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+ }
+
+ .popup .popup-content .control-buttons button :hover {
+   background-position: right center;
+   color: #fff;
+   text-decoration: none;
+ } 
+
+.popup.active {
+    top: 0px;
+    transition: top 0ms ease-in-out 0ms;
+}
+
+.popup.active .overlay {
+    opacity: 1;
+    transition: all 300ms ease-in-out;
+}
+
+.popup.active .popup-content {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.div {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+
+}
+
+.div input {
+    border-radius: 5px;
+    outline-color: ivory;
+    color: black;
+    background-color: ivory;
+}
+
+.popup-header {
+    margin-bottom: 10%;
+    background: -webkit-linear-gradient(140deg, #200122b4, #6f0000);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.message-div {
+    height: 40px;
+}
+
+.error {
+    display: 0;
+    padding: 0px 20px;
+    width: 100%;
+    background-color: #d9544d;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.success {
+    background-color: #98fb98;
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.15);
+    min-width: 300px;
+    height: 220px;
+    opacity: 0;
+    padding: 25px;
+    border-radius: 25px;
+}

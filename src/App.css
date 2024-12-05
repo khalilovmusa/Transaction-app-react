@@ -1,0 +1,197 @@
+* {
+  font-family: monospace, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid ivory;
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 500px;
+  min-height: 450px;
+}
+
+.wrapper .button-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+
+.list .list-item {
+  list-style-type: none;
+  margin-bottom: 15px;
+  color: purple;
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  padding: 5px 7px;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.list .list-item  div{
+  display: inline-block;
+}
+
+.transactions-container {
+  margin-top: 30px;
+}
+
+.button {
+  height: 35px;
+  width: 35px;
+  border: none;
+  border-radius: 50%;
+  padding: 5px;
+  align-items: center;
+  background: ivory;
+  color: #E9E4F0;
+  margin-left: 5px;
+}
+
+/* Add Transaction Button CSS */
+
+
+.transaction-add-button {
+  position: relative;
+  margin-left: 60%;
+  padding: 8px 5px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px dashed black;
+}
+
+.transaction-add-button {
+  padding: 0.5em 1.3em;
+  border: 2px solid #17C3B2;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: .3s;
+  z-index: 1;
+  font-family: inherit;
+  color: #17C3B2;
+}
+
+.transaction-add-button::before {
+  content: '';
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #17C3B2;
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.transaction-add-button:hover::before {
+  width: 105%;
+}
+
+.transaction-add-button:hover {
+  color: ivory;
+}
+
+/* Wrapper background color add */
+
+.wrapper {
+  background: linear-gradient(130deg, #D3CCE3, #E9E4F0);
+}
+
+/* Delete button CSS */
+
+.delete-transaction:hover {
+  background-image: linear-gradient(to right, #e53935 0%, #e35d5b 51%, #e53935 100%)
+}
+
+.delete-transaction:hover {
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+}
+
+.delete-transaction:hover:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Edit button CSS */
+
+.edit-transaction:hover {
+  background-image: linear-gradient(to right, #ffffC5 0%, #ffffC5 51%, #ffffc5c9 100%);
+}
+
+.edit-transaction:hover svg{
+  color: black;
+}
+
+.edit-transaction:hover {
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+}
+
+.edit-transaction:hover:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/* transactions list CSS */
+
+.list {
+  max-height: 300px;
+  overflow: auto;
+  padding-right: 15px;
+}
+
+.list::-webkit-scrollbar {
+  transition: 0.5s ease;
+  width: 5px; /* Width for vertical scrollbars */
+  height: 12px; /* Height for horizontal scrollbars */
+}
+
+.list::-webkit-scrollbar-thumb {
+  background: #ffc5c5; /* Color of the thumb */
+  border-radius: 6px; /* Make it round */
+  transition: 0.3s;
+}
+
+.list::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the track */
+  border-radius: 6px; /* Make it round */
+}
+
+/* Optional: Hover effect for the thumb */
+.list::-webkit-scrollbar-thumb:hover {
+  background: #efd4ff; /* Darker color when hovering */
+  transition: 0.3s;
+}
